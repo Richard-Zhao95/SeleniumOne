@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class ForTest {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+/*        Scanner scanner = new Scanner(System.in);
 
         System.out.print("请输入第一个正整数m:");
         int m = scanner.nextInt();
@@ -30,7 +30,7 @@ public class ForTest {
                 System.out.println("最小公倍数为：" + i);
                 break;
             }
-        }
+        }*/
 
 
         int sum_odd = 0;
@@ -102,5 +102,21 @@ public class ForTest {
         System.out.println("质数个数为：" + count_zhishu);
         System.out.println("所花费的时间为：" + (endTime - startTime));
 
+        //找出1000以内的所有完数（因子：除去这个数本身的其他约数）（一个数如果恰好等于它的因子之和，这个数就被称为完数，如6=1+2+3）
+        int factor = 0;
+        for(int i=1;i<=1000;i++){
+            for(int j=1;j< i/2;j++){
+                if(i%j==0){
+                    factor+=j;
+                }
+            }
+            if(factor==i){
+                System.out.println(i);
+            }
+            //重置factor
+            factor=0;
+        }
     }
 }
+
+

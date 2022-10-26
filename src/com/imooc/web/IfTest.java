@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class IfTest {
     public static void main(String[] args) {
+        System.out.println(9/2);
         Scanner scanner = new Scanner(System.in);
         System.out.println("请依次输入三个整数，以回车结束：");
         int num1 = scanner.nextInt();
